@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>San Angelico Museum of Contemporary Art</title>
+  <link rel="stylesheet" href="css/jquery.mobile.min.css">
+  <style>
+    #homeBanner {
+      width: 100%;
+    }
+
+    .header-image {
+      background-image: url("./imgs/download.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .header-image h1,
+    .header-image h3 {
+      color: #fff;
+      font-weight: 400;
+      text-shadow: none;
+    }
+
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+    }
+
+    #qrcode {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #map2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  </style>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="homeScreen" data-role="page">
+    <div class="app">
+      <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received"></p>
+        <!-- <p class="battery-status"></p> -->
+      </div>
+    </div>
+    <div class="header-image">
+      <h1>World of Warcraft</h1>
+      <h3>Classic Edition</h3>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+        <li><a href="#playableChars">Class Info</a></li>
+        <li><a href="#playableRaces">Playable Races</a></li>
+        <li><a href="#whoPlay">Who are you playing?</a></li>
+      </ul>
+      <div class="ui-grid-a center">
+        <p class="battery-status">LOOK</p>
+      </div>
+    </div>
+  </div>
+  <div id="whoPlay" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>Survey</h1>
+      <a href="#homeScreen"
+        class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Who are you playing?</h1>
+      <form action="" method="get">
+        <label for="username" class="ui-hidden-accessible">Character Name:</label>
+        <input type="text" name="username" id="username" value="" placeholder="Your Name">
+        <fieldset data-role="controlgroup">
+          <legend>Faction:</legend>
+          <label for="rb1">Alliance</label>
+          <input type="radio" name="rb" id="rb1" value="rb1" checked="checked" />
+          <label for="rb2">Horde</label>
+          <input type="radio" name="rb" id="rb2" value="rb2" />
+
+        </fieldset>
+
+        <fieldset data-role="controlgroup" data-type="vertical">
+          <legend>What class will you play?</legend>
+
+          <label for="month">Select Class</label>
+          <select name="month" id="month">
+            <option value="war">Warrior</option>
+            <option value="sha">Shaman</option>
+            <option value="mag">Mage</option>
+            <option value="warl">Warlock</option>
+            <option value="rog">Rogue</option>
+            <option value="hun">Hunter</option>
+            <option value="pri">Priest</option>
+            <option value="pal">Paladin</option>
+            <option value="dru">Druid</option>
+          </select>
+        </fieldset>
+        <div class="ui-field-contain">
+          <a href="#" id="button-submit-form" class="ui-btn">Submit</a>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+  <div id="playableChars" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>WOW: Classic</h1>
+      <a href="#homeScreen"
+        class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Information</h1>
+      <div data-role="collapsible">
+        <h4>Druid</h4>
+        <p>Druids are versatile hybrids. They perform different roles using appropriate shape-shifting forms. They can
+          have high armor and rage like a warrior in Bear Form, stealth and fight in melee like a rogue in Cat Form, or
+          heal and nuke with spells in humanoid form. Through talents, they can enhance one or more of these roles and
+          even gain a new form for nuking (Moonkin Form). Their talent trees are Balance, for nuking, Feral, for melee
+          damage and tanking capabilities, and lastly, Restoration, for healing. With roughly equivalent gear, talents
+          appropriate to the role, and in the hands of a skilled player, they can be just as effective as one of the
+          classes dedicated to each role.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Hunter</h4>
+        <p>Hunters are the only class that can effectively use ranged weapons (bows, guns, or crossbows) as a primary
+          source of damage. Very adept at kiting, they have plenty of tools to allow them to avoid melee combat, which
+          is not where their strength lies. Hunters may tame many varieties of beasts to serve as combat pets, which
+          along with an array of scouting, tracking, and survival abilities make them excellent solo characters. The
+          three talent specializations for hunters are Marksmanship, Beast Mastery, and Survival.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Mage</h4>
+        <p>Mages are ranged magic damage dealers with very powerful direct and area of effect damage spells, but in
+          return have weak armor and defense. Mages also feature a variety of utility spells, such as teleportation or
+          the creation of portals to captial cities. The also feature the popular crowd control ability, Polymorph, and
+          can even conjure food and water. Because of their various spells which include burst damage, they are often
+          effective at PvP regardless of their low armor.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Paladin</h4>
+        <p>Paladins are Holy warriors and are a hybrid class. They can deal melee DPS, tank, or heal. Paladins also have
+          very strong group support and buff abilities, arguably one of the best buffing and group support classes in
+          the game. They can wear heavy plate armor and carry shields, but are also efficient single target healers,
+          which combine to produce their renowned durability in combat. With talent specialization and equipment
+          selection, Paladins can fill the role of melee DPS, tank, offtank, or healer and excel when called upon to
+          spot-fill all these roles in a group setting.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Priest</h4>
+        <p>Priests are arguably the most versatile healing class in the game. Priests can be powerful in healing a
+          single character or many allies at once. Priests have a variety of utility spells, along with a few tricks,
+          such as Mind Control and the extremely useful Dispel Magic and Cure Disease.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Rogue</h4>
+        <p>Rogues excel at dealing melee damage and incapacitating their foes, particularly low health and low armor
+          targets such as casters. Stealth gives them a tactical advantage and allows them to start a fight on their own
+          terms. Other important abilities include lockpicking and the handling of poisons. Another perk of the rogue is
+          their ability to stun and incapacitate a hostile target for a long period of time.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Shaman</h4>
+        <p>Shamans are one of the most versatile classes in the game as they can switch seamlessly from offensive caster
+          to healer to melee DPS as needed, though at later levels they often specialize in one of these roles. Shamans
+          can provide good support to a party, with the ability to step in and fill any role that may be lacking at the
+          moment. Their high burst damage and healing also make them quite good at PvP.
+        </p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Warlock</h4>
+        <p>Warlocks enslave demons and call upon dark magic and curses to dominate and destroy their foes. Like hunters,
+          warlocks employ combat pets, but these are summoned demons rather than tamed beasts. They are primarily ranged
+          magic damage dealers with a focus on dealing "damage over time" in addition to nukes and AoE, but lack the
+          extreme burst damage capabilities of a mage.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Warrior</h4>
+        <p>Warriors are close-combat, melee fighters and usually fill the role of primary tank or off-tank, as they are
+          able to both withstand and inflict fierce physical punishment. Warriors have the most versatile means of
+          generating threat and keeping aggro off other characters. They can also contribute very strong melee DPS when
+          needed. Warrior abilities use rage, which is generated by dealing and taking damage, but decays over time
+          while not in combat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="playableRaces" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>Playable Races</h1>
+      <a href="#homeScreen"
+        class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <p style="padding-bottom: 15px;">These are all the available races that can be played</p>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <h2>Human</h2>
+        </li>
+        <li>
+          <h2>Gnome</h2>
+        </li>
+        <li>
+          <h2>Dwarf</h2>
+        </li>
+        <li>
+          <h2>Night Elf</h2>
+        </li>
+        <li>
+          <h2>Orc</h2>
+        </li>
+        <li>
+          <h2>Undead</h2>
+        </li>
+        <li>
+          <h2>Tauren</h2>
+        </li>
+        <li>
+          <h2>Troll</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="discoverScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen"
+        class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <img id="qrcode" src="imgs/qr.png" />
+      <h3 class="center">Discover More Exciting Stories</h3>
+      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from
+        SAMOCA.</p>
+      <a id="qrScanBtn" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Discover</a>
+    </div>
+  </div>
+  <!--
+Admission
+Directions
+Parking
+Hours
+Volunteer
+-->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+</body>
+
+</html>
